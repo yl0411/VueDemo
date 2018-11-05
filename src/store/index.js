@@ -10,7 +10,7 @@ export default new vuex.Store({
     },
     mutations: {
         isShow: function(state){
-            state.show = !state.show
+            state.show = !state.from
         },
         add: function(state){
             state.num++;

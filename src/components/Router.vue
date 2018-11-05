@@ -6,7 +6,7 @@
 
 <script>
 	export default {
-		name: 'Vuex1',
+		name: 'Router',
 		data() {
 			return {
 

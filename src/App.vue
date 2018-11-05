@@ -64,7 +64,9 @@
             </el-menu>
         </div>
         <!-- router插座 -->
-        <router-view/>
+        <transition>
+            <router-view/>
+        </transition>
     </div>
 </template>
 
