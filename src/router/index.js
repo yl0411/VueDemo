@@ -11,6 +11,7 @@ import Banner from '@/components/Banner';
 import Vuex1 from '@/components/Vuex1';
 import For from '@/components/For';
 import Routers from '@/components/Router';
+import Routers1 from '@/components/Router1'
 
 Vue.use(Router);
 
@@ -28,6 +29,7 @@ const routes = new Router({
         {path: '/vuex1', name: 'Vuex1', component: Vuex1},
         {path: '/for', name: 'For', component: For},
         {path: '/router', name: 'Routers', component: Routers},
+        {path: '/router1/:id', name: 'Routers1', component: Routers1},
     ]
 })
 

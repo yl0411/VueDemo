@@ -9,17 +9,17 @@
                     </template>
                     <el-menu-item-group>
                         <span slot="title">Basic</span>
-                        <el-menu-item index="icon">Icon 图标</el-menu-item>
-                        <el-menu-item index="button">Button 按钮</el-menu-item>
+                        <el-menu-item index="/icon">Icon 图标</el-menu-item>
+                        <el-menu-item index="/button">Button 按钮</el-menu-item>
                     </el-menu-item-group>
                     <el-menu-item-group>
                         <span slot="title">Form</span>
-                        <el-menu-item index="radio">Radio 单选框</el-menu-item>
-                        <el-menu-item index="checkbox">Checkbox 多选框</el-menu-item>
-                        <el-menu-item index="input">Input 输入框</el-menu-item>
+                        <el-menu-item index="/radio">Radio 单选框</el-menu-item>
+                        <el-menu-item index="/checkbox">Checkbox 多选框</el-menu-item>
+                        <el-menu-item index="/input">Input 输入框</el-menu-item>
                     </el-menu-item-group>
                 </el-submenu>
-                <el-menu-item index="alert">
+                <el-menu-item index="/alert">
                     <i class="el-icon-menu"></i>
                     <span slot="title">Alert 警告</span>
                 </el-menu-item>
@@ -27,7 +27,7 @@
                     <i class="el-icon-document"></i>
                     <span slot="title">Dialog 对话框</span>
                 </el-menu-item>
-                <el-menu-item index="banner">
+                <el-menu-item index="/banner">
                     <i class="el-icon-setting"></i>
                     <span slot="title">Carousel 走马灯</span>
                 </el-menu-item>
@@ -37,7 +37,7 @@
                         <span slot="title">基础</span>
                     </template>
                     <el-menu-item-group>
-                        <el-menu-item index="for">列表渲染</el-menu-item>
+                        <el-menu-item index="/for">列表渲染</el-menu-item>
                         <!-- <el-menu-item index="vuex2">核心</el-menu-item> -->
                     </el-menu-item-group>
                 </el-submenu>
@@ -47,7 +47,8 @@
                         <span slot="title">路由</span>
                     </template>
                     <el-menu-item-group>
-                        <el-menu-item index="router">路由守望</el-menu-item>
+                        <el-menu-item @click="goRouter(4)" index="">路由传参</el-menu-item>
+                        <el-menu-item index="/router">路由守望</el-menu-item>
                         <!-- <el-menu-item index="vuex2">核心</el-menu-item> -->
                     </el-menu-item-group>
                 </el-submenu>
@@ -57,7 +58,7 @@
                         <span slot="title">Vuex</span>
                     </template>
                     <el-menu-item-group>
-                        <el-menu-item index="vuex1">入门</el-menu-item>
+                        <el-menu-item index="/vuex1">入门</el-menu-item>
                         <!-- <el-menu-item index="vuex2">核心</el-menu-item> -->
                     </el-menu-item-group>
                 </el-submenu>
@@ -84,6 +85,11 @@
             },
             handleClose(key, keyPath) {
                 console.log(key, keyPath);
+            },
+            goRouter(ID){
+                this.$router.push({
+                    path: '/router1/' + ID
+                })
             }
         }
     }
